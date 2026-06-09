@@ -3,14 +3,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const activitySelect = document.getElementById("activity");
   const signupForm = document.getElementById("signup-form");
   const messageDiv = document.getElementById("message");
+  const messageDiv = document.getElementById("message");
+  let messageTimeoutId = null;
 
   function showMessage(text, className) {
     messageDiv.textContent = text;
     messageDiv.className = className;
     messageDiv.classList.remove("hidden");
 
-    setTimeout(() => {
+    if (messageTimeoutId) {
+      clearTimeout(messageTimeoutId);
+    }
+
+    messageTimeoutId = setTimeout(() => {
       messageDiv.classList.add("hidden");
+      messageTimeoutId = null;
     }, 5000);
   }
 
