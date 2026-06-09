@@ -98,13 +98,21 @@ section h3 {
 
 .participants-list {
   margin: 0;
-  padding-left: 20px;
+  padding-left: 0;
   color: #374151;
+  list-style: none;
 }
 
 .participants-list li {
   margin-bottom: 6px;
   padding-left: 4px;
+}
+
+.participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
 }
 
 .participants-list li:last-child {
@@ -114,6 +122,23 @@ section h3 {
 .empty-participants {
   color: #6b7280;
   font-style: italic;
+}
+
+.remove-participant-button {
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: 1px solid #f1b8b8;
+  background: #fff5f5;
+  color: #b42318;
+  font-size: 16px;
+  line-height: 1;
+  padding: 0;
+}
+
+.remove-participant-button:hover {
+  background: #ffe4e6;
 }
 
 .form-group {
